@@ -1,4 +1,4 @@
-# test
+# Test
 
 ## Project setup
 ```
@@ -22,5 +22,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# Smart-city-website
-## Remote control and observation of your mini-farm
