@@ -1,11 +1,10 @@
 <template>
-  <div></div>
+  <div><h1>Yo</h1></div>
 </template>
 
 <script>
 export default {
-  name: "PropertyCard",
-  props: {}
+  name: "Video"
 };
 </script>
 
