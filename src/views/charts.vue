@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Whats up?</h1>
-    <p>Can I Kickkkk it?</p>
+    <h1>Under construciton</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Stats",
+  name: "Charts",
   props: []
 };
 </script>

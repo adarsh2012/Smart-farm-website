@@ -5,18 +5,28 @@ export default {
   extends: Bar,
   data: () => ({
     chartdata: {
-      labels: ["January", "February"],
+      labels: ["Max", "Current", "Min"],
       datasets: [
         {
           label: "Data One",
-          backgroundColor: "#f87979",
-          data: [40, 20]
+          backgroundColor: ["#f87979", "#90CAF9", "#FFBD1D"],
+          data: [90, 85, 80]
         }
       ]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            }
+          }
+        ]
+      }
     }
   }),
 
