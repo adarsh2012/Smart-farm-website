@@ -1,141 +1,37 @@
 <template>
   <div id="homeData">
-    <b-container fluid class="bv-example-row">
-      <b-row class="mb-3">
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
-      </b-row>
-
-      <b-row class="mb-3">
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
-        <b-col
-          ><b-card class="text-center card-color" align="center">
-            <template v-slot:header>
-              <b-nav card-header tabs>
-                <b-nav-item disabled>Humidity</b-nav-item>
-                <b-nav-item active>Data</b-nav-item>
-                <b-nav-item>Graph</b-nav-item>
-                <b-nav-item>Log</b-nav-item>
-              </b-nav>
-            </template>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-            <h1>hahsdhadhashds</h1>
-          </b-card></b-col
-        >
+    <b-container fluid>
+      <b-row class="mb-5" v-for="row in data" :key="row.row">
+        <b-col v-for="items in row.data" v-bind:key="items">
+          <DataCard :CardName="items" />
+        </b-col>
       </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
-// import DataCard from "../components/DataCard";
+import DataCard from "../components/DataCard";
 export default {
   name: "Home",
   components: {
-    // DataCard
+    DataCard
   },
-  props: []
+  props: [],
+  data() {
+    return {
+      data: [
+        { row: 1, data: ["EC value", "pH value", "Water level"] },
+        { row: 2, data: ["Humidity", "Temperature", "Light"] }
+      ]
+    };
+  }
 };
 </script>
 
 <style scoped>
 #homeData {
-  color: black;
-}
-
-.card-color {
-  background-color: #374e5880;
-  box-shadow: 2px coral;
+  color: rgb(255, 255, 255);
+  margin: 1% 0;
 }
 </style>

@@ -56,6 +56,7 @@ export default {
 .sidebar {
   font-family: "Times New Roman", Times, serif;
   background: #063146;
+  margin: 5% 0;
 }
 .sidebar header {
   font-size: 22px;
