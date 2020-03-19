@@ -32,9 +32,9 @@ export default {
           route: "/"
         },
         {
-          name: "Stats",
-          logoName: "calculator",
-          route: "/stats"
+          name: "Charts",
+          logoName: "chart-line",
+          route: "/chart"
         },
         {
           name: "Control",

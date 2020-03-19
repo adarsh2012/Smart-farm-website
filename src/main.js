@@ -10,18 +10,17 @@ import {
   faVideo,
   faTable,
   faCalculator,
-  faCog
+  faCog,
+  faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-library.add(faVideo, faTable, faCalculator, faCog);
+library.add(faVideo, faTable, faCalculator, faCog, faChartLine);
 Vue.config.productionTip = false;
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-// Install BootstrapVue
-Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin);
 Vue.use(VueYoutube);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 new Vue({
   router,
   render: h => h(App)

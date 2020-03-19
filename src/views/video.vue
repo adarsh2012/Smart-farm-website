@@ -1,11 +1,47 @@
 <template>
-  <div><h1>Yo</h1></div>
+  <div>
+    <div id="video-wrapper">
+      <h3>Live footage</h3>
+      <youtube
+        :video-id="videoId"
+        :width="1000"
+        :height="500"
+        ref="youtube"
+        @playing="playing"
+      ></youtube>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Video"
+  data() {
+    return {
+      videoId: "4VoqwrEEAZM"
+    };
+  },
+  methods: {
+    playVideo() {
+      this.player.playVideo();
+    },
+    playing() {
+      console.log("/ we are watching!!!");
+    }
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player;
+    }
+  }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#video-wrapper {
+  text-align: center;
+  margin: 1%;
+}
+h3 {
+  color: red;
+}
+</style>

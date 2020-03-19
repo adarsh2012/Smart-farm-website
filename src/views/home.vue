@@ -31,7 +31,6 @@ export default {
 
 <style scoped>
 #homeData {
-  color: rgb(255, 255, 255);
   margin: 1% 0;
 }
 </style>
