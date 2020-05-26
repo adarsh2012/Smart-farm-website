@@ -21,7 +21,7 @@ export default {
   name: "Sidebar",
   props: [],
   components: {
-    NavComponent
+    NavComponent,
   },
   data() {
     return {
@@ -29,26 +29,21 @@ export default {
         {
           name: "Data",
           logoName: "table",
-          route: "/"
+          route: "/",
         },
         {
-          name: "Charts",
-          logoName: "chart-line",
-          route: "/chart"
-        },
-        {
-          name: "Control",
-          logoName: "cog",
-          route: "/control"
+          name: "Stats",
+          logoName: "calculator",
+          route: "/stats",
         },
         {
           name: "Video",
           logoName: "video",
-          route: "/video"
-        }
-      ]
+          route: "/video",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

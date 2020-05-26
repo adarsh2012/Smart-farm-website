@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      videoId: "Ffl3BYut9ww"
+      videoId: "jabmsmCn0n4",
     };
   },
   methods: {
@@ -26,13 +26,13 @@ export default {
     },
     playing() {
       console.log("/ we are watching!!!");
-    }
+    },
   },
   computed: {
     player() {
       return this.$refs.youtube.player;
-    }
-  }
+    },
+  },
 };
 </script>
 

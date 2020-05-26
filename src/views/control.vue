@@ -1,5 +1,10 @@
 <template>
   <div id="controlData">
+    <div id="last-updated-control">
+      <h5>
+        Last updated: <b-badge variant="light">12/2/3 9:00:00 AM</b-badge>
+      </h5>
+    </div>
     <b-container fluid>
       <b-row class="mb-5" v-for="rowData in controlCardData" :key="rowData.row">
         <b-col v-for="data in rowData.data" :key="data.name">
@@ -20,7 +25,7 @@ import ControlCard from "../components/ControlCard ";
 export default {
   name: "Control",
   components: {
-    ControlCard
+    ControlCard,
   },
   data() {
     return {
@@ -30,8 +35,8 @@ export default {
           data: [
             { name: "EC", range: [5.5, 6.5], step: 0.1, metric: " (S/m)" },
             { name: "pH", range: [4.5, 5.5], step: 0.1, metric: "" },
-            { name: "Water Level", range: [-5, 5], step: 1, metric: " (mm)" }
-          ]
+            { name: "Water Level", range: [-5, 5], step: 1, metric: " (mm)" },
+          ],
         },
         {
           row: 2,
@@ -41,14 +46,14 @@ export default {
               name: "Temperature",
               range: [16, 22],
               step: 0.1,
-              metric: " (°C)"
+              metric: " (°C)",
             },
-            { name: "Light", range: [0, 1], step: 1, metric: " (On/Off)" }
-          ]
-        }
-      ]
+            { name: "Light", range: [0, 1], step: 1, metric: " (On/Off)" },
+          ],
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

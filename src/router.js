@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Home from "./views/home.vue";
 import Charts from "./views/charts.vue";
 import Video from "./views/video.vue";
-import Control from "./views/control.vue";
+import Stats from "./views/stats.vue";
 
 Vue.use(Router);
 
@@ -12,22 +12,22 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
     },
     {
       path: "/chart",
       name: "chart",
-      component: Charts
+      component: Charts,
     },
     {
       path: "/video",
       name: "video",
-      component: Video
+      component: Video,
     },
     {
-      path: "/control",
-      name: "control",
-      component: Control
-    }
-  ]
+      path: "/stats",
+      name: "Stats",
+      component: Stats,
+    },
+  ],
 });
