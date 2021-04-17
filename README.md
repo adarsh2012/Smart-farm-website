@@ -4,7 +4,7 @@
 
 **This github repo  only includes the front-end (Vue.js framework) of the application**
 
-A server less application, utilizing AWS lambda, IOT and RDS, which communicates with raspberry pi to monitor and control farm's environmental properties (such as temperature, humidity, etcetera) in real-time. Other features include: Streaming footage of the farm and notifying users if certain properties are above the recommended limit. 
+A server less application, utilizing AWS lambda, IOT and RDS, which communicates with raspberry pi to monitor and control farm's environmental properties (such as temperature, humidity, etcetera) in real-time. Other features include: Streaming footage of the farm and notifying users if certain properties are above/below the recommended limit. 
 
 ### Application architecture
 
