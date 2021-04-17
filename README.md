@@ -9,6 +9,7 @@ A server less application, utilizing AWS lambda, IOT and RDS, which communicates
 ### Application 
 
 ![image](https://user-images.githubusercontent.com/42161058/115119366-30773780-9fd2-11eb-907c-bc2b774b75bb.png)
+![image](https://user-images.githubusercontent.com/42161058/115119550-20ac2300-9fd3-11eb-9380-956e629122b2.png)
 
 
 ## Project setup
